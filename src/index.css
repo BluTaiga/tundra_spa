@@ -1,0 +1,148 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* We tell all items to be 100% width, fia flex-basis */
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: tomato;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.header a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background: #1565C0;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: deepskyblue;
+}
+
+.aside-1 {
+  background: gold;
+  padding: 0;
+}
+
+.aside-1 ul {
+  padding: 0;
+}
+
+.aside li {
+  list-style: none;
+}
+
+.aside a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.aside li:nth-child(1) {
+  border-top: 1px solid rgba(255, 255, 255,0.3); 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+.aside li:nth-child(2) {
+  border-top: 1px solid rgba(255, 255, 255,0.3); 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+.aside li:nth-child(3) {
+  border-top: 1px solid rgba(255, 255, 255,0.3); 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+.aside li:nth-child(4) {
+  border-top: 1px solid rgba(255, 255, 255,0.3); 
+}
+
+.aside a:hover {
+  background: purple;
+}
+
+body {
+  padding: 2em;
+}
+
+/* We rely on source order for mobile-first approach
+ * in this case:
+ * 1. header
+ * 2. article
+ * 3. aside 1
+ * 4. aside 2
+ * 5. footer
+ */
+
+ /* Medium screens */
+
+@media all and (min-width: 600px) {
+  /* We tell both sidebars to share a row */
+  .aside { flex: 1 0 0; }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+  .main { flex: 3 0px; }
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+@media all and (max-width: 800px) {
+  .header {
+    justify-content: space-around;
+  }
+  .aside-1 {order: 1}
+  .main {order: 2}
+  .footer {order: 3}
+}
+
+@media all and (max-width: 600px) {
+  .header {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .header a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+  .header li:last-of-type a {
+    border-bottom: none;
+  }
+}

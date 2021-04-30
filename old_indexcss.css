@@ -1,0 +1,84 @@
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  background: deepskyblue;
+  max-width: 1000px;
+  width: 90%;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  background: #1565C0;
+}
+
+.wordContent {
+  background-color: red;
+  padding-left: 10px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+p { 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+  background-color: #FFF;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 1px;
+}
+
+.footer {
+  height: 20px;
+  max-width: 1000px;
+  background-color: blue;
+  padding: 0;
+  margin: 0 auto;
+}
+
+body {
+  background-color: black;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Page Display Width Rules */
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
