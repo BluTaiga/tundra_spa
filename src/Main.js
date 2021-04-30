@@ -10,7 +10,7 @@ import {
   TundraHistory, 
   Tyrium, 
   TundraCurrentStatus, 
-  Title
+  Prompt
 } from "./profile_text/Tundra"
 import Copyright from "./profile_text/Copyright"
 
@@ -19,12 +19,12 @@ const Main = () => {
     <HashRouter>
       <div className="wrapper">
         <ul className="header">
-          <li><NavLink exact to="/">Character 1</NavLink></li>
+          <li><NavLink exact to="/">Tundra</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
         <div className="main">
           <Route exact path="/">
-            <Title notice={<Copyright/>}/>
+            <Prompt notice={<Copyright/>}/>
           </Route>
           <Route path="/contact">
             <Contact/>

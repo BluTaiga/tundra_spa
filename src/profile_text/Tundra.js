@@ -1,4 +1,4 @@
-const Title = (props) => {
+const Prompt = (props) => {
   return (
     <div>
       <h2>SPI-FlexCom Console</h2>
@@ -14,7 +14,7 @@ const Title = (props) => {
           Connection successful!
         </p>
         <p>
-          Welcome Cpt. Jiang Winters
+          Welcome Cpt. Winters
         </p>
         <p>
           Sec-SPI-Console {">"} cd halberd_sector/Aurora/errant_subjects/T47C-M1<br></br>
@@ -93,12 +93,8 @@ const TundraHistory = (props) => {
 const Tyrium = (props) => {
   return (
     <div>
-    <h2>BOOST</h2>
+    <h2>TYRIUM</h2>
       <div>
-        <p>
-          SPI-FlexCom Database [Version 121.147.3B]<br/>
-          (c) 2376 Seyfert Prototype Interplanetary
-        </p>
         <p>
           Tyrium, first discovered on Kearsarge IV, is a highly caustic and dangerous<br/>
           compound. It is found on only a few asteroids and comets around KEA4,<br/>
@@ -177,5 +173,5 @@ export {
   TundraHistory,
   Tyrium,
   TundraCurrentStatus,
-  Title
+  Prompt
 }
