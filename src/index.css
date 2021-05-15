@@ -14,7 +14,7 @@
 }
 
 .header {
-  background: tomato;
+  background: #3C3C3C;
   display: flex;
   flex-flow: row wrap;
   padding: 0;
@@ -32,20 +32,25 @@
 }
 
 .header a:hover {
-  background: #1565C0;
+  background: #505050;
 }
 
 .footer {
-  background: lightgreen;
+  background: #1D70A2;
 }
 
 .main {
   text-align: left;
-  background: deepskyblue;
+  background: #1E1E1E;
+  color: #9CDCF0;
+}
+
+h2 {
+  color: #E6C229;
 }
 
 .aside-1 {
-  background: gold;
+  background: #252526;
   padding: 0;
 }
 
@@ -87,7 +92,8 @@
 }
 
 .aside a:hover {
-  background: purple;
+  background: #37373D;
+  color: #D7974C;
 }
 
 body {
